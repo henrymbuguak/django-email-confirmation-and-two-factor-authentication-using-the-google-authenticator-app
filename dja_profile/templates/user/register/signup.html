@@ -1,0 +1,54 @@
+{% extends 'user/base.html' %}
+
+{% block title %}Register | HenryLab {% endblock %}
+
+
+{% block content %}
+    <div class="container">
+    <div class="row">
+    {% if user.is_authenticated %}
+
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Welcome {{request.user.username}},</h3>
+                </div>
+                <div class="panel-body">
+                    <a href="{% url 'dja_profile:dashboard' %}">View your Dashboard</a>
+                </div>
+            </div>
+        </div>
+
+        {% else %}
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Register</h3>
+                </div>
+                <div class="panel-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            <p>
+                                {{ field.label_tag }}<br>
+                                {{ field }}
+                                {% if field.help_text %}
+                                    <small style="display: none">{{ field.help_text }}</small>
+                                {% endif %}
+                                {% for error in field.errors %}
+                                    <p style="color: red">{{ error }}</p>
+                                {% endfor %}
+                            </p>
+                        {% endfor %}
+
+                        <button type="submit" class="btn btn-primary">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    {% endif %}
+
+    </div>
+    </div>
+{% endblock %}
