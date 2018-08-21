@@ -25,7 +25,7 @@ SECRET_KEY = 've^_iuk^k-si!zo69$gq+9(lbfdm8u82q_ocbr$4pc!ysd1$c+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['henrymbuguak.pythonanywhere.com']
+ALLOWED_HOSTS = ['henrymbuguak.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -126,8 +126,8 @@ STATIC_URL = '/static/'
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'youremail@mail.com'
-EMAIL_HOST_PASSWORD = 'password'
+EMAIL_HOST_USER = 'henrymbuguak@mail.com'
+EMAIL_HOST_PASSWORD = '3918km1990hmk'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
