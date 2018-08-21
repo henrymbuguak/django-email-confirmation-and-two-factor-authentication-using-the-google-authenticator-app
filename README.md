@@ -36,7 +36,7 @@ EMAIL_USE_TLS = True
 
 ### Demo site
 
-To test the functionality of this project, visit [henrylab demo site](http://henrymbuguak.pythonanywhere.com/)
+To test the functionality of this project, visit [HenryLab demo site](http://henrymbuguak.pythonanywhere.com/)
 
 
 1. Register using a valid email address
